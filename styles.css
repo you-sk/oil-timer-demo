@@ -69,4 +69,59 @@ canvas {
     font-weight: bold;
     height: 30px;
     text-align: center;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.theme-selector {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.theme-selector:hover {
+    border-color: #9ca3af;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.theme-selector:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+#canvas-container.theme-ocean {
+    border-color: #1e40af;
+    box-shadow: 0 4px 20px rgba(30, 64, 175, 0.3);
+}
+
+#canvas-container.theme-lava {
+    border-color: #dc2626;
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
+}
+
+#canvas-container.theme-space {
+    border-color: #6b21a8;
+    box-shadow: 0 4px 20px rgba(107, 33, 168, 0.3);
+}
+
+body.theme-ocean {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body.theme-lava {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+body.theme-space {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
 }
